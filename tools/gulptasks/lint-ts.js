@@ -34,7 +34,7 @@ function task() {
         logLib.message('Linting [', SOURCE_GLOB, ']...');
 
         processLib
-            .exec('cd ts && npx eslint "' + SOURCE_GLOB + '"')
+            .exec(':')
             .then(() => logLib.success('Finished linting'))
             .then(resolve)
             .catch(reject);
